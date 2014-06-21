@@ -5,8 +5,11 @@ File list
 -----------------
 
 README.md         this file.
+
 run_analysis.R    R script used to process data and generate.
+
 tidy_data.txt     tidy dataset produced by the run_analysis.R.
+
 CodeBook.md       describe all variable names and their meaning.
 
 To run run_analysis.R, put the script into your working directory containing the dataset at the subdirectory ("./getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/) and then run source("run_analysis.R"). You will get the tidy_data.txt file at the end.
@@ -32,7 +35,7 @@ Data are collected human movement measured by the accelerometers within the Sams
 Description
 -----------------
 
-Each parts are detailed belwo:
+Each parts are detailed below:
 
 1. Obtain data set
 
@@ -56,28 +59,44 @@ The subjects data for the train data and text data are then read into R separate
 
 The resulted dataframes have 7352 rows x 563 columns for train data, and 2947 rows x 563 columns for test data.
 
+
 3. Merges the resulted training and the test sets from the Part 2 to create one data set (requested Task 1)
 
 Resulted training and the test dataframes from the Part 2 are merged into one dataframe called mergedData, which has 10299 rows and 563 columns as expected.
+
 
 4. Extracts only the measurements on the mean and standard deviation for each measurement (requested Task 2). In the same time, activity labels ( numbered 1 - 6) are replaced with descriptive names (requested Task 3), and column names are changed to more human-readable variable names (requested Task 4).
 
 First, the column names (features) are read into R. The actual strings of those features that contain either "mean" or "std" are identified by grep() (79) and put into a name vectors. The columns names in the name vector are then modified to more human-readable forms by gsub(). Specifically, the following changes are made one by one:
 
 Change dash ("-") to underscore (_)
+
 Remove ()
+
 Change starting "t" to "Average_Time"
+
 Change starting "f" to "Average_Frequency_"
+
 Change ""BodyAcc" or "BodyBodyAcc" to "Body_Acceleration"
+
 Change "GravityAcc" to "Gravity_Acceleration"
+
 Change "BodyGyro" or BodyBodyGyro to "Body_Gyroscopic"
+
 Change "Jerk" to "_Jerk" 
+
 Change "std" to "StdDev"
+
 Change "Mag" to "_Magnitude"
+
 Change "meanFreq" to "meanFrequency"
+
 Change ending "X" to "X_axis"
+
 Change ending "Y" to "Y_axis"
+
 Change ending "Z" to "Z_axis"
+
 
 The resulting column names are described in the CodeBook.md file. These names are long, and might not be very efficient for storage and processing, but more human readable as requested by the project specification.
 

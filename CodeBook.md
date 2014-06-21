@@ -24,9 +24,12 @@ Thus the column names are separated on the following levels:
 A. Time domain vs Frequency domain signals.
 
 B. Body_Acceleration, Gravity_Acceleration, Body_Gyroscopic, 
+
    Body_Acceleration_Jerk, Body_Gyroscopic_Jerk, 
+   
    Body_Acceleration_Magnitude, Body_Gyroscopic_Magnitude, 
-   Body_Acceleration_Jerk_Magnitude, Body_Gyroscopic_Jerk_Magnitude.
+   
+   Body_Acceleration_Jerk_Magnitude, Body_Gyroscopic_Jerk_Magnitude
 
 C. mean vs StdDev data (also meanFrequency for Frequency domain signals).
 
@@ -40,7 +43,9 @@ All data are normalized and thus unit-less.
  81 Column names 
 ==============================================
  1 Subject 
+ 
  2 Activity 
+ 
  3 Average_Time_Body_Acceleration_mean_X_axis                      
  4 Average_Time_Body_Acceleration_mean_Y_axis                     
  5 Average_Time_Body_Acceleration_mean_Z_axis                       
