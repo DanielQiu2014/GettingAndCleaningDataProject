@@ -4,13 +4,13 @@ Project of Coursera course Getting and Cleaning Data
 File list
 -----------------
 
-README.md         this file.
+README.md:         this file.
 
-run_analysis.R    R script used to process data and generate.
+run_analysis.R:    R script used to process data and generate.
 
-tidy_data.txt     tidy dataset produced by the run_analysis.R.
+tidy_data.txt:     tidy dataset produced by the run_analysis.R.
 
-CodeBook.md       describe all variable names and their meaning.
+CodeBook.md:       describe all variable names and their meaning.
 
 To run run_analysis.R, put the script into your working directory containing the dataset at the subdirectory ("./getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/) and then run source("run_analysis.R"). You will get the tidy_data.txt file at the end.
 
@@ -37,7 +37,7 @@ Description
 
 Each parts are detailed below:
 
-1. Obtain data set
+1  Obtain data set
 
 the script first changes the current working directory to the project's directory, and download the the original data set from
 
@@ -49,7 +49,8 @@ The dataset is then unzipped manually in the currect working directory into a di
 	getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/
 
 
-2. Read data into R
+
+2  Read data into R
 
 The train data and text data are read into R separately using read.table() with fill = TRUE, stringsAsFactors = FALSE argument so as to prevent data corruption during the process. This procedure generates a dataframe with 7352 rows x 561 columns for train data, and a dataframe with 2947 rows x 561 columns for test data.
 
@@ -60,12 +61,12 @@ The subjects data for the train data and text data are then read into R separate
 The resulted dataframes have 7352 rows x 563 columns for train data, and 2947 rows x 563 columns for test data.
 
 
-3. Merges the resulted training and the test sets from the Part 2 to create one data set (requested Task 1)
+3  Merges the resulted training and the test sets from the Part 2 to create one data set (requested Task 1)
 
 Resulted training and the test dataframes from the Part 2 are merged into one dataframe called mergedData, which has 10299 rows and 563 columns as expected.
 
 
-4. Extracts only the measurements on the mean and standard deviation for each measurement (requested Task 2). In the same time, activity labels ( numbered 1 - 6) are replaced with descriptive names (requested Task 3), and column names are changed to more human-readable variable names (requested Task 4).
+4  Extracts only the measurements on the mean and standard deviation for each measurement (requested Task 2). In the same time, activity labels ( numbered 1 - 6) are replaced with descriptive names (requested Task 3), and column names are changed to more human-readable variable names (requested Task 4).
 
 First, the column names (features) are read into R. The actual strings of those features that contain either "mean" or "std" are identified by grep() (79) and put into a name vectors. The columns names in the name vector are then modified to more human-readable forms by gsub(). Specifically, the following changes are made one by one:
 
