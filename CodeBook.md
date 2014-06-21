@@ -9,9 +9,9 @@ The original data are downloaded from
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-The code for production of the tidy_data.txt file from original data set is in run_analysis.R and the processes are described in ReadMe file 
+The codes for production of the tidy_data.txt file from original data set is in run_analysis.R and the processes are described in README.md file. 
 
-The final tidy data file contain data from 30 subjects numbered 1 - 30, each are engaged in 6 activities (walking, walking_upstairs, walking_downstairs, sitting, standing, laying), resulting a total of 180 rows of records. Each record contain 2 metadata columns (Subject and Activity) and 79 data column (see below), resulting in (2+79) x 180 = 14,480 data cells. 
+The final tidy data file contains data from 30 subjects numbered 1 - 30, each are engaged in 6 activities (walking, walking_upstairs, walking_downstairs, sitting, standing, laying), resulting a total of 180 rows of records. Each record contain 2 metadata columns (Subject and Activity) and 79 data column (see below), resulting in (2+79) x 180 = 14,480 data cells. 
 
 ===================================================
 Description of data column names and their meaning
@@ -21,14 +21,16 @@ The data are timed signals (denoted as Time) generated from either accelerometer
 
 Thus the column names are separated on the following levels:
 
-A. Time domain vs Frequency domain signals
-B. 
-    Body_Acceleration, Gravity_Acceleration, Body_Gyroscopic
-    Body_Acceleration_Jerk, Body_Gyroscopic_Jerk, 
-    Body_Acceleration_Magnitude, Body_Gyroscopic_Magnitude, 
-    Body_Acceleration_Jerk_Magnitude, Body_Gyroscopic_Jerk_Magnitude
-C. mean vs StdDev data (also meanFrequency for Frequency domain signals)
-D. X_axis, Y_axis, Z_axis
+A. Time domain vs Frequency domain signals.
+
+B. Body_Acceleration, Gravity_Acceleration, Body_Gyroscopic, 
+   Body_Acceleration_Jerk, Body_Gyroscopic_Jerk, 
+   Body_Acceleration_Magnitude, Body_Gyroscopic_Magnitude, 
+   Body_Acceleration_Jerk_Magnitude, Body_Gyroscopic_Jerk_Magnitude.
+
+C. mean vs StdDev data (also meanFrequency for Frequency domain signals).
+
+D. X_axis, Y_axis, Z_axis.
 
 Finally, data for each of 30 subjects on each of six activities were averaged and reported in the final tidy-data files. 
 
@@ -37,8 +39,8 @@ All data are normalized and thus unit-less.
 ==============================================
  81 Column names 
 ==============================================
- 1 Subject
- 2 Activity
+ 1 Subject 
+ 2 Activity 
  3 Average_Time_Body_Acceleration_mean_X_axis                      
  4 Average_Time_Body_Acceleration_mean_Y_axis                     
  5 Average_Time_Body_Acceleration_mean_Z_axis                       

@@ -4,10 +4,10 @@ Project of Coursera course Getting and Cleaning Data
 File list
 -----------------
 
-README.md  		    this file
-run_analysis.R		R script used to process data and generate 
-tidy_data.txt		  tidy dataset produced by the run_analysis.R
-CodeBook.md		    describe all variable names and their meaning
+README.md         this file.
+run_analysis.R    R script used to process data and generate.
+tidy_data.txt     tidy dataset produced by the run_analysis.R.
+CodeBook.md       describe all variable names and their meaning.
 
 To run run_analysis.R, put the script into your working directory containing the dataset at the subdirectory ("./getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/) and then run source("run_analysis.R"). You will get the tidy_data.txt file at the end.
 
@@ -64,20 +64,20 @@ Resulted training and the test dataframes from the Part 2 are merged into one da
 
 First, the column names (features) are read into R. The actual strings of those features that contain either "mean" or "std" are identified by grep() (79) and put into a name vectors. The columns names in the name vector are then modified to more human-readable forms by gsub(). Specifically, the following changes are made one by one:
 
-change dash ("-") to underscore (_)
-remove ()
-change starting "t" to "Average_Time"
-change starting "f" to "Average_Frequency_"
-change ""BodyAcc" or "BodyBodyAcc" to "Body_Acceleration"
-change "GravityAcc" to "Gravity_Acceleration"
-change "BodyGyro" or BodyBodyGyro to "Body_Gyroscopic"
-change "Jerk" to "_Jerk" 
-change "std" to "StdDev"
-change "Mag" to "_Magnitude"
-change "meanFreq" to "meanFrequency"
-change ending "X" to "X_axis"
-change ending "Y" to "Y_axis"
-change ending "Z" to "Z_axis"
+Change dash ("-") to underscore (_)
+Remove ()
+Change starting "t" to "Average_Time"
+Change starting "f" to "Average_Frequency_"
+Change ""BodyAcc" or "BodyBodyAcc" to "Body_Acceleration"
+Change "GravityAcc" to "Gravity_Acceleration"
+Change "BodyGyro" or BodyBodyGyro to "Body_Gyroscopic"
+Change "Jerk" to "_Jerk" 
+Change "std" to "StdDev"
+Change "Mag" to "_Magnitude"
+Change "meanFreq" to "meanFrequency"
+Change ending "X" to "X_axis"
+Change ending "Y" to "Y_axis"
+Change ending "Z" to "Z_axis"
 
 The resulting column names are described in the CodeBook.md file. These names are long, and might not be very efficient for storage and processing, but more human readable as requested by the project specification.
 
